@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visualizar Veículos</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Veículos Cadastrados</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Marca</th>
+					<th>Modelo</th>
+					<th>Ano</th>
+					<th>Cor</th>
+					<th>Placa</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% List
+				<Veiculo> veiculos = (List<Veiculo>)
+				request.getAttribute("veiculos"); for (Veiculo veiculo : veiculos) {
+				%>
+				<tr>
+					<td><%= veiculo.getMarca() %></td>
+					<td><%= veiculo.getModelo() %></td>
+					<td><%= veiculo.getAno() %></td>
+					<td><%= veiculo.getCor() %></td>
+					<td><%= veiculo.getPlaca() %></td>
+				</tr>
+				<% } %> 
+			</tbody>
+		</table>
+		<a href="index.html">Voltar ao Menu</a>
+	</div>
+</body>
+</html>

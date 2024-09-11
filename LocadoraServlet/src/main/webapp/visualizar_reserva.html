@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Reservas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reservas Cadastradas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Veículo</th>
+                    <th>Data de Início</th>
+                    <th>Data de Fim</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% 
+                List<Reserva> reservas = (List<Reserva>) request.getAttribute("reservas");
+                for (Reserva reserva : reservas) { 
+                %>
+                <tr>
+                    <td><%= reserva.getCliente() %></td>
+                    <td><%= reserva.getVeiculo() %></td>
+                    <td><%= reserva.getDataInicio() %></td>
+                    <td><%= reserva.getDataFim() %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <a href="index.html">Voltar ao Menu</a>
+    </div>
+</body>
+</html>

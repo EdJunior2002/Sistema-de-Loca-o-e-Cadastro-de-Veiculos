@@ -1,0 +1,64 @@
+<web-app>
+    <!-- Mapeamento das servlets para clientes -->
+    <servlet>
+        <servlet-name>CadastrarClienteServlet</servlet-name>
+        <servlet-class>com.locadora.CadastrarClienteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastrarClienteServlet</servlet-name>
+        <url-pattern>/cadastrarCliente</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClienteServlet</servlet-name>
+        <servlet-class>com.locadora.ClienteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClienteServlet</servlet-name>
+        <url-pattern>/clientes</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Mapeamento das servlets para veículos -->
+    <servlet>
+        <servlet-name>CadastrarVeiculoServlet</servlet-name>
+        <servlet-class>com.locadora.CadastrarVeiculoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastrarVeiculoServlet</servlet-name>
+        <url-pattern>/cadastrarVeiculo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VeiculoServlet</servlet-name>
+        <servlet-class>com.locadora.VeiculoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VeiculoServlet</servlet-name>
+        <url-pattern>/veiculos</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapeamento das servlets para reservas -->
+    <servlet>
+        <servlet-name>CadastrarReservaServlet</servlet-name>
+        <servlet-class>com.locadora.CadastrarReservaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastrarReservaServlet</servlet-name>
+        <url-pattern>/reservarVeiculo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReservaServlet</servlet-name>
+        <servlet-class>com.locadora.ReservaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReservaServlet</servlet-name>
+        <url-pattern>/reservas</url-pattern>
+    </servlet-mapping>
+
+    <!-- Configuração da página de erro -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.html</location>
+    </error-page>
+</web-app>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Clientes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clientes Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% 
+                List<Cliente> clientes = (List<Cliente>) request.getAttribute("clientes");
+                for (Cliente cliente : clientes) { 
+                %>
+                <tr>
+                    <td><%= cliente.getNome() %></td>
+                    <td><%= cliente.getEndereco() %></td>
+                    <td><%= cliente.getTelefone() %></td>
+                    <td><%= cliente.getEmail() %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <a href="index.html">Voltar ao Menu</a>
+    </div>
+</body>
+</html>

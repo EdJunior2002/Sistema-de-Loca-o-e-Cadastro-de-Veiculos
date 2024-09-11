@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Reserva</title>
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Reserva</h1>
+        <form action="reservarVeiculo" method="post">
+            <label for="cliente">Nome do Cliente:</label>
+            <input type="text" id="cliente" name="cliente" required>
+
+            <label for="veiculo">Placa do Veículo:</label>
+            <input type="text" id="veiculo" name="veiculo" required>
+
+            <label for="dataInicio">Data de Início:</label>
+            <input type="date" id="dataInicio" name="dataInicio" required>
+
+            <label for="dataFim">Data de Fim:</label>
+            <input type="date" id="dataFim" name="dataFim" required>
+
+            <input type="submit" value="Reservar">
+        </form>
+        <div id="mensagem">
+            <%= request.getAttribute("mensagem") %>
+        </div>
+        <a href="index.html">Voltar ao Menu</a>
+    </div>
+</body>
+</html>
